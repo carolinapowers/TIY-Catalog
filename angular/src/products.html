@@ -43,12 +43,11 @@
 
         <section class="tab-content container-fluid">
 
-            <div ng-show="store.isSelected(1)" class="listings"
-                ng-class="store.getView()">
+            <div ng-show="store.isSelected(1)" class="listings" ng-class="store.getView()">
                 <div ng-repeat="item in store.items" class="listing">
                     <img class="text-center grid-img" ng-src="{{item.MainImage[0].url_75x75}}">
                     <h1>{{item.title}}</h1>
-                    <span class="price">{{item.price}}</span>
+                    <span class="price">{{item.price | currency}}</span>
                     <p class="grid-descrition">{{item.description}}</p>
                     <div class="list-button">
                         <a class="cartbutton">
