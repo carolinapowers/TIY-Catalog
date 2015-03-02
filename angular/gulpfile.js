@@ -13,7 +13,7 @@ gulp.task('watch', function () {
     gulp.watch('scss/*.scss', ['sass']);
 });
 
-gulp.task('server', function () {
+gulp.task('serve', function () {
     browserSync({
         server: {
             baseDir: "./src",
