@@ -8,8 +8,13 @@ gulp.task('sass', function () {
     return gulp.src('src/scss/*.scss')
         .pipe(sass({
             includePaths: [
+<<<<<<< HEAD
             'bower_components/bootstrap-sass/assets/stylesheets/'
           ],
+=======
+          'bower_components/bootstrap-sass/assets/stylesheets/'
+        ],
+>>>>>>> aaac49d9e60870433e099a5db6cca3f7be5e8a01
             onError: console.error.bind(console, 'Sass error:')
         }))
         .pipe(gulp.dest('src/css'))
