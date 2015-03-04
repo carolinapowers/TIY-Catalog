@@ -192,7 +192,7 @@ td, th {
   src: url('../fonts/bootstrap/glyphicons-halflings-regular.eot');
   src: url('../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/bootstrap/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/bootstrap/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/bootstrap/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg'); }
 
-.glyphicon {
+.glyphicon, .navbar > a .list-icon {
   position: relative;
   top: 1px;
   display: inline-block;
@@ -254,7 +254,7 @@ td, th {
 .glyphicon-th:before {
   content: "\e011"; }
 
-.glyphicon-th-list:before {
+.glyphicon-th-list:before, .navbar > a .list-icon:before {
   content: "\e012"; }
 
 .glyphicon-ok:before {
@@ -1388,22 +1388,22 @@ pre {
   .container-fluid:after {
     clear: both; }
 
-.row {
+.row, .listings.list .listing {
   margin-left: -15px;
   margin-right: -15px; }
-  .row:before, .row:after {
+  .row:before, .listings.list .listing:before, .row:after, .listings.list .listing:after {
     content: " ";
     display: table; }
-  .row:after {
+  .row:after, .listings.list .listing:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .listings.grid .listing, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .listings.grid .listing, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .listings.list .listing img, .listings.list .listing h1, .listings.list .listing span, .col-md-2, .listings.list .listing div, .col-lg-2, .col-xs-3, .listings.list .listing img, .listings.list .listing h1, .listings.list .listing span, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .listings.grid .listing, .listings.list .listing p, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .listings.grid .listing, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .listings.list .listing p, .listings.list .listing div, .col-sm-12, .listings.list .listing p, .listings.list .listing div, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px; }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+.col-xs-1, .col-xs-2, .col-xs-3, .listings.list .listing img, .listings.list .listing h1, .listings.list .listing span, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .listings.list .listing p, .listings.list .listing div {
   float: left; }
 
 .col-xs-1 {
@@ -1412,7 +1412,7 @@ pre {
 .col-xs-2 {
   width: 16.66667%; }
 
-.col-xs-3 {
+.col-xs-3, .listings.list .listing img, .listings.list .listing h1, .listings.list .listing span {
   width: 25%; }
 
 .col-xs-4 {
@@ -1439,7 +1439,7 @@ pre {
 .col-xs-11 {
   width: 91.66667%; }
 
-.col-xs-12 {
+.col-xs-12, .listings.list .listing p, .listings.list .listing div {
   width: 100%; }
 
 .col-xs-pull-0 {
@@ -1560,11 +1560,11 @@ pre {
   margin-left: 100%; }
 
 @media (min-width: 768px) {
-  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .listings.grid .listing, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+  .col-sm-1, .col-sm-2, .listings.list .listing img, .listings.list .listing h1, .listings.list .listing span, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .listings.grid .listing, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .listings.list .listing p, .listings.list .listing div {
     float: left; }
   .col-sm-1 {
     width: 8.33333%; }
-  .col-sm-2 {
+  .col-sm-2, .listings.list .listing img, .listings.list .listing h1, .listings.list .listing span {
     width: 16.66667%; }
   .col-sm-3 {
     width: 25%; }
@@ -1584,7 +1584,7 @@ pre {
     width: 83.33333%; }
   .col-sm-11 {
     width: 91.66667%; }
-  .col-sm-12 {
+  .col-sm-12, .listings.list .listing p, .listings.list .listing div {
     width: 100%; }
   .col-sm-pull-0 {
     right: auto; }
@@ -1666,15 +1666,15 @@ pre {
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .listings.grid .listing, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .listings.list .listing div, .col-md-3, .col-md-4, .listings.grid .listing, .listings.list .listing p, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left; }
   .col-md-1 {
     width: 8.33333%; }
-  .col-md-2 {
+  .col-md-2, .listings.list .listing div {
     width: 16.66667%; }
   .col-md-3 {
     width: 25%; }
-  .col-md-4, .listings.grid .listing {
+  .col-md-4, .listings.grid .listing, .listings.list .listing p {
     width: 33.33333%; }
   .col-md-5 {
     width: 41.66667%; }
@@ -4887,25 +4887,17 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-::before {
+:before {
   color: #D0D0D0; }
 
 :hover:before {
   color: #58A4D7; }
 
-/*  **Known Issue Selected Anchor tag will need to add a class to change its color**
-    :selected:before {
-        color: #58A4D7;
-    }
-*/
 .container {
   border: 3px solid #47a3da;
   padding-top: 2em;
   margin-top: 3em;
   margin-bottom: 3em; }
-
-.listings.list .listing {
-  /* What goes here? */ }
 
 .navbar > a {
   float: right;
@@ -4953,40 +4945,40 @@ li {
   padding-top: 1em;
   width: 100%; }
 
-.list-title {
+.list-title, .listings.list .listing h1 {
   margin-top: 12.5%;
   font-size: 2em;
-  color: #58A3D6; }
+  color: #58A4D7; }
 
 .price {
-  color: #C0C0C0;
+  color: #D0D0D0;
   font-size: 2em;
   display: block; }
 
-.list-price {
+.list-price, .listings.list .listing span {
   margin-top: 12%; }
 
-.list-description {
+.list-description, .listings.list .listing p {
   margin-top: 12%;
-  color: #59A4D7;
+  color: #58A4D7;
   padding: 0; }
 
 .grid-description {
   margin: 1em 4em; }
 
-.list-img {
+.list-img, .listings.list .listing img {
   padding: 0;
-  border: 0.5em solid lightgray;
+  border: 0.5em solid #D0D0D0;
   margin-bottom: 2em;
   display: block; }
 
-.listing-img:hover {
+.list-img:hover, .listings.list .listing img:hover {
   border: 0.5em solid grey; }
 
 .cartbutton {
   margin-bottom: 2em;
   color: white;
-  background-color: #47a3da;
+  background-color: #58A4D7;
   border-radius: 2px;
   height: 3em;
   padding: 1em;
@@ -4999,7 +4991,7 @@ li {
   color: white;
   background-color: darkblue; }
 
-.list-button {
+.list-button, .listings.list .listing div {
   margin-top: 12%;
   padding: 0; }
 
@@ -5008,11 +5000,11 @@ li {
   margin-top: 0; }
 
 @media (max-width: 991px) {
-  .list-title {
+  .list-title, .listings.list .listing h1 {
     margin-top: 23.5%; }
-  .list-price {
+  .list-price, .listings.list .listing span {
     margin-top: 22%; }
-  .list-description {
+  .list-description, .listings.list .listing p {
     margin-top: -3%; }
-  .list-button {
+  .list-button, .listings.list .listing div {
     margin-top: 0; } }
