@@ -31,14 +31,17 @@
 </head>
 
 
-
 <body ng-app="tiy-catalog" ng-controller="StoreController as store">
 
     <div class="container">
 
         <nav class="navbar">
-            <a ng-click="store.setView('list')" class="glyphicon glyphicon-th-list"></a>
-            <a ng-click="store.setView('grid')" class="navAnchors glyphicon glyphicon-th"></a>
+            <a href="#" ng-click="store.setView('list')" ng-class="{true: 'active'}[store.getView() === 'list']" class="glyphicon glyphicon-th-list"></a>
+            <a href="#" ng-click="store.setView('grid')" ng-class="{true: 'active'}[store.getView() === 'grid']" class="glyphicon glyphicon-th"></a>
+            <!--
+            <a ng-class="{true: 'active', false: ' '}[store.isSelected(2)]" ng-click="store.setView('list')" class="glyphicon glyphicon-th-list"></a>
+            <a ng-class="{true: 'active'}[store.isSelected(1)]" ng-click="store.setView('grid')" class="navAnchors glyphicon glyphicon-th"></a>
+-->
         </nav>
 
         <section class="tab-content container-fluid">
